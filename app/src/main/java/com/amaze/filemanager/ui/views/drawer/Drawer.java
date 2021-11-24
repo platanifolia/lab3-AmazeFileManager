@@ -55,6 +55,7 @@ import com.amaze.filemanager.utils.Billing;
 import com.amaze.filemanager.utils.BookSorter;
 import com.amaze.filemanager.utils.DataUtils;
 import com.amaze.filemanager.utils.OTGUtil;
+import com.amaze.filemanager.utils.OpenLabGithub;
 import com.amaze.filemanager.utils.ScreenUtils;
 import com.amaze.filemanager.utils.TinyDB;
 import com.amaze.filemanager.utils.Utils;
@@ -128,6 +129,7 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
   private View drawerHeaderLayout, drawerHeaderView;
   private ImageView donateImageView;
   private ImageView telegramImageView;
+  private ImageView labAboutImageView;
   private TextView appVersion;
 
   /** Tablet is defined as 'width > 720dp' */
@@ -145,12 +147,14 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
     drawerHeaderView = drawerHeaderLayout.findViewById(R.id.drawer_header);
     donateImageView = drawerHeaderLayout.findViewById(R.id.donate);
     telegramImageView = drawerHeaderLayout.findViewById(R.id.telegram);
+    labAboutImageView = drawerHeaderLayout.findViewById(R.id.lab_about);
     appVersion = drawerHeaderLayout.findViewById(R.id.app_version);
     if (BuildConfig.DEBUG) {
       appVersion.setVisibility(View.VISIBLE);
     }
     donateImageView.setOnClickListener(v -> new Billing(mainActivity));
     telegramImageView.setOnClickListener(v -> Utils.openTelegramURL(mainActivity));
+    labAboutImageView.setOnClickListener(v -> new OpenLabGithub(mainActivity));
     initDrawerFocusItems();
     /*drawerHeaderView.setOnLongClickListener(
     v -> {
