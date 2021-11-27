@@ -2075,6 +2075,11 @@ public class MainActivity extends PermissionsActivity
     }
   }
 
+  public void buttonTest(View view){
+    Intent intent = new Intent(MainActivity.this,MyActivity.class);
+    startActivity(intent);
+  }
+
   @Override
   public void deleteConnection(OpenMode service) {
     cloudHandler.clear(service);
