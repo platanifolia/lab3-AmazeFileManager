@@ -2075,8 +2075,8 @@ public class MainActivity extends PermissionsActivity
     }
   }
 
-  public void buttonTest(View view){
-    Intent intent = new Intent(MainActivity.this,MyActivity.class);
+  public void buttonTest(View view) {
+    Intent intent = new Intent(MainActivity.this, MyActivity.class);
     startActivity(intent);
   }
 
