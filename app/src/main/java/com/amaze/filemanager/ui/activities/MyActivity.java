@@ -21,7 +21,7 @@ public class MyActivity extends Activity {
         startActivity(intent);
     }
 
-    public void buttonTest(View view) {
+    public void gotoMain(View view) {
         Intent intent = new Intent(MyActivity.this,MainActivity.class);
         startActivity(intent);
     }

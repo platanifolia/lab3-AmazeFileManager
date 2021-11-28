@@ -32,16 +32,6 @@
         android:layout_below="@id/action_bar"
         >
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="35dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="buttonTest"
-            android:text="@string/botton_test"
-            app:layout_anchor="@+id/content_frame"
-            app:layout_anchorGravity="top|center" />
-
         <HorizontalScrollView
             android:scrollbars="none"
             android:id="@+id/scroll"
