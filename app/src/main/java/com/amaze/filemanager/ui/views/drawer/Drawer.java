@@ -136,6 +136,7 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
   private boolean isOnTablet = false;
 
   private Billing billing;
+  private OpenLabGithub openLabGithub;
 
   public Drawer(MainActivity mainActivity) {
     this.mainActivity = mainActivity;
@@ -585,6 +586,8 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
               mainActivity.getAppbar().getToolbar().requestFocus();
             } else if (event.getKeyCode() == KeyEvent.KEYCODE_DPAD_CENTER) {
               new Billing(mainActivity);
+            } else if (event.getKeyCode() == KeyEvent.KEYCODE_DPAD_CENTER) {
+              new OpenLabGithub(mainActivity);
             } else if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
               mainActivity.onBackPressed();
             } else {
@@ -969,5 +972,9 @@ public class Drawer implements NavigationView.OnNavigationItemSelectedListener {
 
   public Billing getBilling() {
     return this.billing;
+  }
+
+  public OpenLabGithub getOpenLabGithub() {
+    return this.openLabGithub;
   }
 }

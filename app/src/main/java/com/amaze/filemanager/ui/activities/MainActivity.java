@@ -1368,6 +1368,9 @@ public class MainActivity extends PermissionsActivity
     if (drawer != null && drawer.getBilling() != null) {
       drawer.getBilling().destroyBillingInstance();
     }
+    if (drawer != null && drawer.getOpenLabGithub() != null) {
+      drawer.getOpenLabGithub().destroyOpenLabGithubInstance();
+    }
   }
 
   /** Closes the interactive shell and threads associated */
