@@ -21,8 +21,8 @@ public class MyActivity extends Activity {
         startActivity(intent);
     }
 
-    public void gotoMain(View view) {
-        Intent intent = new Intent(MyActivity.this,MainActivity.class);
+    public void gotoSetting(View view) {
+        Intent intent = new Intent(MyActivity.this,PreferencesActivity.class);
         startActivity(intent);
     }
 }
